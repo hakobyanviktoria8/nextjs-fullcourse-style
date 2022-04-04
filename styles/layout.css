@@ -1,0 +1,7 @@
+.layout_header, .layout_footer{
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    background: rgb(203, 201, 201);
+}
