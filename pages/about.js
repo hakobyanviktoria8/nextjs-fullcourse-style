@@ -5,7 +5,7 @@ function About() {
   return (
     <div>
         <h1 className={styles.title}>About page</h1>
-        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" className="btn btn-primary">Primary</button>
     </div>
   )
 }
