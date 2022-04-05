@@ -1,0 +1,17 @@
+.Navbar{
+    padding: 20px 100px;
+    box-shadow: 0 0 10px grey;
+    /* margin-bottom: 300px; */
+    /* position: fixed; */
+    /* left: 0; */
+    /* right: 0; */
+    /* z-index: 10; */
+    background: white;
+    /* top: 0; */
+}
+.Navbar > a{
+    color: gray;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 20px;
+}

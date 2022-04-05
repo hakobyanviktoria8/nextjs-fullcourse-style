@@ -3,5 +3,13 @@
     padding: 30px;
     font-size: 40px;
     font-weight: 700;
-    background: rgb(203, 201, 201);
+    background: rgb(238 233 233 / 20%);
+}
+.layout_header{
+    /* position: absolute; */
+    /* top: 50px; */
+    width: 100%;
+}
+.layout_footer{
+    margin-top: auto;
 }

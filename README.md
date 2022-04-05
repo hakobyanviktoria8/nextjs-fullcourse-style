@@ -41,3 +41,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ## Add TS
  yarn add --dev typescript
+
+ ## next-aute
+start autentication with npm next-aute
+https://next-auth.js.org/

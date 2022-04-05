@@ -2,3 +2,6 @@
     background-color: aqua;
     color: rgb(26, 26, 56);
 }
+.About{
+    height: calc(100vh - 310px);
+}
