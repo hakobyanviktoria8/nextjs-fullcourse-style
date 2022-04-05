@@ -7,20 +7,23 @@ import Footer from '../components/Footer';
 import "../styles/layout.css"
 import  Head  from 'next/head';
 import Navbar from "../components/Navbar"
+// import { SessionProvider } from "next-auth/react"
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
   return  (
-    <div className='container_next'>
-    {/* all place can show this Head, but prifer more specific if it's has */}
-      <Head>
-        <title>___________MyApp title more important____________</title>
-        <meta name='description' content='MyApp description more important'></meta>
-      </Head>
-      <Navbar/>
-      <Header/>
-      <Component {...pageProps} />
-      <Footer/>
-    </div>
+    // <SessionProvider session={session}>
+      <div className='container_next'>
+      {/* all place can show this Head, but prifer more specific if it's has */}
+        <Head>
+          <title>___________MyApp title more important____________</title>
+          <meta name='description' content='MyApp description more important'></meta>
+        </Head>
+        <Navbar/>
+        <Header/>
+        <Component {...pageProps} />
+        <Footer/>
+      </div>
+    // </SessionProvider>
   )
 }
 

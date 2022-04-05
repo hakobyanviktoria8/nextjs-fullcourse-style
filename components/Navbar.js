@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import {SignIn, SignOut} from 'next-auth/react'
 import styles from "./../styles/Navbar.module.css"
 
 function Navbar() {
@@ -10,8 +11,22 @@ function Navbar() {
         <Link href="/news">News</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/contact">Contact</Link>
-        <Link href="/sign-up">Sign up</Link>
-        <Link href="/sign-in">Sign in</Link>
+        <Link href="/api/auth/signin">
+            <a onClick={e=> {
+                e.preventDefault()
+                SignIn()
+            }}>
+                Sign in
+            </a>
+        </Link>
+        <Link href="/api/auth/signout">
+            <a onClick={e=> {
+                e.preventDefault()
+                SignOut()
+            }}>
+                Sign out
+            </a>
+        </Link>
     </div>
   )
 }
