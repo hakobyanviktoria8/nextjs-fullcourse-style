@@ -7,11 +7,11 @@ import Footer from '../components/Footer';
 import "../styles/layout.css"
 import  Head  from 'next/head';
 import Navbar from "../components/Navbar"
-// import { SessionProvider } from "next-auth/react"
+import { SessionProvider } from "next-auth/react"
 
 function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
   return  (
-    // <SessionProvider session={session}>
+    <SessionProvider session={session}>
       <div className='container_next'>
       {/* all place can show this Head, but prifer more specific if it's has */}
         <Head>
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
         <Component {...pageProps} />
         <Footer/>
       </div>
-    // </SessionProvider>
+      </SessionProvider>
   )
 }
 
