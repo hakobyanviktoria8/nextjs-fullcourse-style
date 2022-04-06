@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 function Navbar() {
     const { data: session } = useSession()
-    console.log(session);
+    // console.log("Navbar session is a ",session);
     // if (session) {
     //     return (
     //       <>
