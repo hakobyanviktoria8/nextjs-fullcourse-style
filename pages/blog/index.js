@@ -17,10 +17,21 @@ export default Blog
 
 // Server-side Authentication
 export async function getServerSideProps(context){
-  const sesion = await getSession(context)
+  const session = await getSession(context)
+
+  if(!session){
+    return{
+      redirect: {
+        destination: `/api/auth/signin?callbackUrl=htto://localhost:3000/blog`,
+        permanent: false,
+      }
+    }
+  }
+
   return{
     props: {
-      data: sesion? "List of 100 blogs": "List of free blogs"
+      session,
+      data: session? "List of 100 blogs": "List of free blogs"
     }
   }
 }
