@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { signIn, signOut, useSession } from "next-auth/react"
 import styles from "./../styles/Navbar.module.css"
+import Image from 'next/image'
 
 function Navbar() {
     const { data: session } = useSession()
@@ -30,12 +31,19 @@ function Navbar() {
                 </a>
             </Link>
         }  
-        { session &&
+        { session && 
+        <>
             <Link href="/api/auth/signout">
                 <a onClick={() => signOut()}>
                     Sign out
                 </a>
-            </Link>
+            </Link> 
+            <div>
+                <Image src={session.user.image} width={50} height={50}/>
+               <p>{session.user.email}</p> 
+               <p>{session.user.name}</p> 
+            </div>
+        </>
         }
     </div>
   )
